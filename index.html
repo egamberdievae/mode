@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First slider</title>
+  <link rel="stylesheet" href="./src/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <button id="switcher">&#127774;</button>
+    </header>
+  
+    <main>
+    <div class="slider">
+      <div class="slides">
+        <div class="slide active">Lorem ipsum dolor sit amet.</div>
+        <div class="slide two">Lorem ipsum dolor sit amet.</div>
+        <div class="slide three">Lorem ipsum dolor sit amet.</div>
+        <div class="slide last">Lorem ipsum dolor sit amet.</div>
+      </div>
+      <button class="nav prev"><i class="fa-solid fa-caret-left"></i></button>
+      <button class="nav next"><i class="fa-solid fa-caret-right"></i></button>
+      <div class="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        
+      </div>
+    </div>
+  </main>
+  
+    <footer>
+      <p>&copy; 2025 Egazo Company. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </footer>
+
+
+    <script src="./script.js"></script>
+<script type="text/javascript">
+  const switcher = document.getElementById("switcher");
+
+
+
+  let isDark = false;
+
+switcher.onclick = () => {
+  if (isDark) {
+   switcher.innerHTML = "&#127761;"; // 🌑
+    document.body.style.setProperty("--bg-1", "#000");
+    document.body.style.setProperty("--color-1", "#fff");
+    document.body.style.setProperty("--bg-2", "silver");
+  } else {
+    switcher.innerHTML = "&#127774;"; // 🌞
+    document.body.style.setProperty("--bg-1", "#fff");
+    document.body.style.setProperty("--color-1", "#000");
+    document.body.style.setProperty("--bg-2", "orange");
+  }
+  isDark = !isDark;
+};
+
+</script>
+ 
+
+
+</body>
+</html>
