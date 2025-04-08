@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>First slider</title>
+  <link rel="icon" type="image/ico" href="https://www.yiiframework.com/image/design/logo/yii3_sign_black.png" />
   <link rel="stylesheet" href="./src/css/main.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -62,12 +63,12 @@
 
 switcher.onclick = () => {
   if (isDark) {
-   switcher.innerHTML = "&#127761;"; // 🌑
+   switcher.innerHTML = "&#127761;"; 
     document.body.style.setProperty("--bg-1", "#000");
     document.body.style.setProperty("--color-1", "#fff");
     document.body.style.setProperty("--bg-2", "silver");
   } else {
-    switcher.innerHTML = "&#127774;"; // 🌞
+    switcher.innerHTML = "&#127774;"; 
     document.body.style.setProperty("--bg-1", "#fff");
     document.body.style.setProperty("--color-1", "#000");
     document.body.style.setProperty("--bg-2", "orange");
